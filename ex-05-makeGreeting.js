@@ -6,7 +6,11 @@
  *
  *
  **/
+function makeGreeting(saludo) {
+  var saludar = "Hello "+ saludo
 
+  return saludar
+}
 
 
 
