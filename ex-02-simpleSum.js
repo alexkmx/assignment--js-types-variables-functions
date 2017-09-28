@@ -6,8 +6,13 @@
  *
  **/
 
-function simpleSum(){
+function simpleSum(n1,n2){
 	//YOUR CODE HERE
+   var suma = n1 + n2
+
+  //  console.log(suma)
+return suma
+
    //  -- NOTE you will need to write the functions for
    //     remaining problems in the problem set
 }

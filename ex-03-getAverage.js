@@ -7,7 +7,12 @@
  * of your average function.
  *
  **/
+function getAverage(n1,n2) {
+var suma = n1 + n2
+var prom = suma / 2
 
+return prom
+}
 
 
 
