@@ -5,8 +5,18 @@
  * whether a character is a vowel or not.
  *
  **/
+function isVowel(v) {
 
+var vocales = "a"
 
+if ( v === "a" || v === "A" || v === "e" || v === "E" || v === "i" || v === "I" || v === "o" || v === "O" || v === "u" || v === "U") {
+ console.log(true)
+  return true
+} else {
+  console.log(false)
+  return false
+}
+}
 
 
 

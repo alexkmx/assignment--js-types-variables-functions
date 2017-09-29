@@ -17,8 +17,18 @@
  *
  * NOTE: Don't forget the comma and space and ending puctuation when building the string.
  **/
+function makeUserGreeting(s,b) {
 
+ var sal1 = "Good to see you again, " + s + "."
+ var sal2 = "Welcome, " + s + "!"
+if ( b === true ) {
 
+return sal1
+} else {
+
+return sal2
+}
+}
 
 
 //*-*~*~*~*~*~ Don't Touch *~*~*~*~*~*~*~*
