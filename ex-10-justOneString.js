@@ -6,6 +6,23 @@
  * but returns false if both arguments or neither are strings
  *
  **/
+function justOneString(a1,a2) {
+
+var tipo = typeof a1
+var tipo2 = typeof a2
+
+if (tipo === "string" && tipo2 === "number") {
+
+  return true
+} else if(tipo === "number" && tipo2 === "string") {
+
+return true
+} else {
+  return false
+}
+}
+
+
 
 
 //*-*~*~*~*~*~ Don't Touch *~*~*~*~*~*~*~*

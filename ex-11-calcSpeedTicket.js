@@ -31,8 +31,33 @@
  *
  **/
 
+function calcSpeedTicket(lv,vu,fd) {
 
+var fineSpeeding = vu - lv 
+var fineProtectedZone = fineSpeeding + fineDoubles
+var fineDoubles = 0
 
+if (lv > vu && fd === false) {
+  console.log("=> 0")
+  return "=> 0"
+
+} else if (fineSpeeding < 20 && fd === false) {
+  console.log("=> 150")
+    return "=> 150"
+
+} else if (fineSpeeding >= 20 && fd === false || fineSpeeding < 20 && fd === true) {
+  console.log("=> 250")
+   return "=> 250"
+
+} else if(fineSpeeding >= 20 && fd === true ){
+console.log("=> 500")
+  return "=> 500"
+} else if(fineSpeeding >= 20 && fd  ) {
+  console.log("=> 500")
+  return "=> 500"
+}
+
+}
 
 //*-*~*~*~*~*~ Don't Touch *~*~*~*~*~*~*~*
 

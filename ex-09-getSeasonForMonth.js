@@ -13,7 +13,34 @@
  * or a non-number data type.
  *
  **/
+function getSeasonForMonth(e) {
+var tipo = typeof e
 
+
+if (tipo  !== "number" ) {
+
+return false
+}else if (e < 1 || e > 12) {
+
+return false
+} else if (e === 3 || e === 4 || e === 5) {
+
+return "spring"
+
+} else if (e === 6 || e === 7 || e === 8 ){
+
+  return "summer"
+
+} else if (e === 9|| e === 10 || e === 11 ) {
+
+  return "fall"
+
+} else {
+
+return "winter"
+
+}
+}
 
 
 //*-*~*~*~*~*~ Don't Touch *~*~*~*~*~*~*~*
