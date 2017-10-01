@@ -33,36 +33,40 @@
 
 function calcSpeedTicket(lv,vu,fd) {
 
-var fineSpeeding = vu - lv 
-var fineProtectedZone = fineSpeeding + fineDoubles
-var fineDoubles = 0
+var fineSpeeding = vu - lv
+var fineProtectedZone = fineSpeeding * 2
+var sinMulta = 0
+var multa1 = 0
+var multa2 = 0
 
-if (lv > vu && fd === false) {
-  console.log("=> 0")
-  return "=> 0"
+if (fineSpeeding <= 0) {
 
-} else if (fineSpeeding < 20 && fd === false) {
-  console.log("=> 150")
-    return "=> 150"
+return sinMulta
 
-} else if (fineSpeeding >= 20 && fd === false || fineSpeeding < 20 && fd === true) {
-  console.log("=> 250")
-   return "=> 250"
+} else if (20 > fineSpeeding > 0 && fd === false) {
+  multa1 = 150
 
-} else if(fineSpeeding >= 20 && fd === true ){
-console.log("=> 500")
-  return "=> 500"
-} else if(fineSpeeding >= 20 && fd  ) {
-  console.log("=> 500")
-  return "=> 500"
+  return  multa1
+} else if (fineSpeeding < 20 && fd === true) {
+  multa1 = 150 * 2
+
+    return  multa1
+} else if (fineSpeeding >= 20 && fd === false) {
+  multa1 = 250
+
+  return  multa1
+} else if(fineSpeeding >= 20 && fd === true) {
+multa1 = 250 * 2
+  
+  return  multa1
+}
 }
 
-}
 
 //*-*~*~*~*~*~ Don't Touch *~*~*~*~*~*~*~*
 
 console.assert( calcSpeedTicket(25, 40, false) === 150  )
-console.assert( calcSpeedTicket(65, 72, true) === 150  )
+console.assert( calcSpeedTicket(65, 72, true) === 300  )
 console.assert( calcSpeedTicket(75, 97, false) === 250 )
 console.assert( calcSpeedTicket(55, 83, true) === 500  )
 
